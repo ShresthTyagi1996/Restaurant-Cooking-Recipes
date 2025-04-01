@@ -75,5 +75,5 @@ li a:hover {
 
 h3:hover {
   color: #f10d0c;
-  cursor: crosshair;
+  cursor: none;
 }
