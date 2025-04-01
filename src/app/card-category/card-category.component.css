@@ -1,0 +1,94 @@
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: white;
+}
+
+/* Horizontal layout styles */
+.card.horizontal {
+  display: flex;
+}
+
+.card.horizontal .image-container {
+  width: 40%; /* Adjust as needed */
+  height: auto; /* Allow image to determine height */
+}
+
+.card.horizontal .card-details {
+  width: 60%; /* Adjust as needed */
+  padding: 15px;
+}
+
+/* Vertical layout styles (default) */
+.card:not(.horizontal) .image-container {
+  height: 200px; /* Set a fixed height for the image container (adjust as needed) */
+  overflow: hidden;
+}
+
+.card img {
+  width: 320px;
+  height: 251px;
+  object-fit: cover;
+  display: block;
+}
+
+card-details {
+  padding: 15px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 1.2em;
+}
+.category-stars {
+  display: flex;
+  justify-content: space-between;
+}
+
+.category-tag {
+  display: inline-block;
+  background-color: #f10d0c; /* Red background for category */
+  color: white;
+  padding: 5px 8px;
+  border-radius: 3px;
+  font-size: 0.8em;
+  margin-left: 5px;
+  margin-bottom: 10px;
+}
+
+.rating {
+  color: #fdd835; /* Yellow for stars */
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 0.9em;
+}
+
+.description {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.view-recipe {
+  background-color: #f10d0c;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}

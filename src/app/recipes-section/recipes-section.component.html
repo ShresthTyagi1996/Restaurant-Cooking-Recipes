@@ -1,0 +1,109 @@
+<div class="recipes-section">
+  <div class="hero">
+    <div class="image-container">
+      <img src="veggies.jpeg" alt="Delicious Recipes" />
+    </div>
+    <div class="hero-content">
+      <h1>Discover Delicious Recipes</h1>
+      <p>Find the perfect dish for any occasion.</p>
+      <div class="hero-buttons">
+        <button class="browse">Browse Recipes</button>
+        <button class="picks">Today's Picks</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="featured-recipes">
+    <div class="feature-header">
+      <h2>Featured Recipes</h2>
+      <a href="#">View All</a>
+    </div>
+
+    <div class="recipe-grid">
+      <app-card
+        imageURL="Image7.jpg"
+        title="Custard Apple Soup"
+        rating="4"
+        ratingCount="128"
+        time="30 min"
+        difficulty="Medium"
+        description="A rich, creamy Soup with garlic, parmesan cheese, and custard apple."
+        category="Indian"
+      ></app-card>
+
+      <app-card
+        imageURL="Image8.jpg"
+        title="Spiced Mashed Vegetables and Buttered Bread"
+        rating="3"
+        ratingCount="94"
+        time="45 min"
+        difficulty="Medium"
+        description="A flavorful mashed vegetables with aromatic spices and buttered bread."
+        category="Indian"
+      ></app-card>
+
+      <app-card
+        imageURL="images.jpeg"
+        title="Sweet Corn Curry"
+        rating="4"
+        ratingCount="67"
+        time="15 min"
+        difficulty="Easy"
+        description="A refreshing bowl of veggies and sweet corn to add freshness in your day."
+        category="Lunch"
+      ></app-card>
+    </div>
+  </div>
+  <div class="recipes-section">
+    <div class="categories">
+      <h2>Explore by Category</h2>
+      <div class="category-grid">
+        <div class="category-card">
+          <div class="category-icon">🍕</div>
+          <p>Main Dishes</p>
+        </div>
+        <div class="category-card">
+          <div class="category-icon">🥪</div>
+          <p>Appetizers</p>
+        </div>
+        <div class="category-card">
+          <div class="category-icon">🍲</div>
+          <p>Soups & Stews</p>
+        </div>
+        <div class="category-card">
+          <div class="category-icon">🥗</div>
+          <p>Salads</p>
+        </div>
+        <div class="category-card">
+          <div class="category-icon">🍰</div>
+          <p>Desserts</p>
+        </div>
+      </div>
+    </div>
+    <div class="trending-now">
+      <h2>Trending Now</h2>
+      <div class="trending-grid">
+        <app-card-category
+          imageURL="fruitchat.jpeg"
+          title="Fruit Chat"
+          rating="4"
+          ratingCount="213"
+          time="15 min"
+          difficulty="Easy"
+          description="Learn how to make authentic Fruit Salad at home with this foolproof recipe. From perfect pieces to delicious taste."
+          category="Snacks"
+        ></app-card-category>
+        <app-card-category
+          imageURL="Image5.jpg"
+          title="Mushroom Gravy"
+          rating="4"
+          ratingCount="189"
+          time="15 min"
+          difficulty="Easy"
+          description="A refreshing Main Dish perfect for hot summer days, packed with seasonal ingredients and delicious mushrooms for protein."
+          category="Healthy"
+        ></app-card-category>
+      </div>
+    </div>
+  </div>
+</div>
