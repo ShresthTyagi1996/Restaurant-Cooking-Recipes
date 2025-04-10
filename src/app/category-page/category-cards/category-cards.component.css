@@ -1,0 +1,51 @@
+.card-display {
+  border-radius: 10px;
+  border: 1px solid black;
+  width: 280px;
+  height: 330px;
+  -webkit-text-size-adjust: 100%;
+}
+
+.content {
+  padding: 0.75rem;
+}
+
+.content > * {
+  margin-bottom: 8px;
+}
+
+.container-image > img {
+  width: 280px;
+  background: rgb(237, 234, 234);
+  background-size: cover;
+  background-repeat: no-repeat; /* Prevent tiling */
+  height: 165px;
+  border-radius: 10px 10px 0 0;
+}
+
+p.genre {
+  position: relative;
+  display: inline-block;
+  padding: 25px 30px;
+  margin: 40px 0;
+  color: #03e9f4;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  overflow: hidden;
+  margin-right: 50px;
+}
+
+.text {
+  font-size: 18pt;
+  font-weight: 700;
+}
+
+.ratings-text {
+  font-size: 1rem;
+  font-weight: 500;
+  color: grey;
+  width: 100%;
+  height: 100px;
+}

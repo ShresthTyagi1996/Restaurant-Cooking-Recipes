@@ -1,0 +1,10 @@
+.container-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 19px;
+  justify-content: center;
+}
+
+.container-grid > * {
+  margin: 10px;
+}

@@ -1,0 +1,60 @@
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  margin: 20px;
+  background-color: #f4f4f4;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+details {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  overflow: hidden; /* To contain rounded corners */
+}
+
+summary {
+  background-color: #eee;
+  color: #333;
+  padding: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  position: relative; /* For the arrow */
+  list-style: none; /* Hide default arrow */
+}
+
+summary::before {
+  content: "+"; /* Initial state arrow */
+  font-size: 1.2em;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+details[open] summary::before {
+  content: "-"; /* Open state arrow */
+}
+
+details p {
+  padding: 15px;
+  color: #555;
+  margin: 0;
+}
+
+/* Subtle hover effect on summary */
+summary:hover {
+  background-color: #e0e0e0;
+}
+
+/* Focus style for accessibility */
+summary:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}

@@ -1,0 +1,146 @@
+.categories-vertical-sidebar {
+  display: flex;
+  position: fixed;
+  top: 59px;
+  flex-direction: column;
+  width: 295px;
+  height: 100%;
+  z-index: 1;
+  overflow: scroll;
+}
+
+.categories-sidebar-header {
+  font-size: 1em;
+  font-weight: bold;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  color: #333;
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+.close-button-div {
+  margin-right: 10px;
+  border: none;
+  font-size: 2em;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  float: left;
+}
+
+.close-button {
+  border: none;
+  font-size: 1.2rem;
+  margin-left: 21px;
+}
+
+.close-button:hover {
+  cursor: pointer;
+}
+
+.heading {
+  text-align: center;
+}
+
+.list-category {
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #ccc;
+}
+
+.keyword {
+  padding: 10px;
+  font-size: 1em;
+  color: #333;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+
+  height: 60px;
+  width: 100%;
+
+  border-bottom: 1px solid #ccc;
+}
+
+.keyword:hover {
+  background-color: #fee6e6;
+  color: #ec0b07;
+  cursor: pointer;
+}
+
+.keyword i {
+  padding-left: 25px;
+  padding-right: 10px;
+}
+
+.message {
+  padding: 10px;
+  font-size: 1em;
+  color: #333;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.3s ease;
+  background: #fee6e6;
+  border-radius: 20px;
+  width: 274px;
+  height: auto;
+  margin-left: 21px;
+  margin-top: 20px;
+}
+
+.message p {
+  letter-spacing: 0.5px;
+  width: 80%;
+}
+
+.message > * {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.message > h3 {
+  margin-top: 22px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form > textarea {
+  border-radius: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+  color: #333;
+  width: 90%;
+  height: 103px;
+  resize: none;
+}
+
+button.submitButton {
+  background: #ec0b07;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 90%;
+  margin-bottom: 20px;
+}
+
+button > i:hover {
+  color: red;
+}
+
+.close-button:hover {
+  border: 2px solid red;
+  padding: 7px;
+}
