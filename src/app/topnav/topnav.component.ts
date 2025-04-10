@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-topnav',
@@ -9,7 +9,6 @@ import { Component } from '@angular/core';
 })
 export class TopnavComponent {
   title: string = 'Manju Kitchen';
-  logoUrl: string = 'assets/logo.png';
   languages: string[] = ['English', 'French', 'German', 'Espanol', 'Italian', 'Japanese', 'Chinese', 'Hindi'];
   selectedLanguage: string = 'English';
   @Output() categoryOpen = new EventEmitter<boolean>(); // Initial state: closed
@@ -17,4 +16,5 @@ export class TopnavComponent {
   emitToggleEvent() {
     this.categoryOpen.emit(true);
   }
+
 }
