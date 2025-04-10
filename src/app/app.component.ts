@@ -3,11 +3,12 @@ import { Component } from '@angular/core';
 import { TopnavComponent } from "./topnav/topnav.component";
 import { RecipesSectionComponent } from "./recipes-section/recipes-section.component";
 import { FooterComponent } from './footer/footer.component';
+import { CategoriesComponent } from "./categories/categories.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [TopnavComponent, RecipesSectionComponent, FooterComponent],
+  imports: [TopnavComponent, RecipesSectionComponent, FooterComponent, CategoriesComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
