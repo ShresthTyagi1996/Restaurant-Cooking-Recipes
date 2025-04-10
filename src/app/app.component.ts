@@ -13,4 +13,13 @@ import { FooterComponent } from './footer/footer.component';
 })
 export class AppComponent {
   title = 'Manju_Kitchen';
+  toggleCategory !: boolean; // Initial state: closed
+
+  switchingToggle(event: any) {
+    this.toggleCategory = event;
+  }
+
+  toggleCategoryPanel(event: any) {
+    this.toggleCategory = event;
+  }
 }
