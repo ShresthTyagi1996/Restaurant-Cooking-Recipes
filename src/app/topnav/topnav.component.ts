@@ -12,4 +12,9 @@ export class TopnavComponent {
   logoUrl: string = 'assets/logo.png';
   languages: string[] = ['English', 'French', 'German', 'Espanol', 'Italian', 'Japanese', 'Chinese', 'Hindi'];
   selectedLanguage: string = 'English';
+  @Output() categoryOpen = new EventEmitter<boolean>(); // Initial state: closed
+
+  emitToggleEvent() {
+    this.categoryOpen.emit(true);
+  }
 }
