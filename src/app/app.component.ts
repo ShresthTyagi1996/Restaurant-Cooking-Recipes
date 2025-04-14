@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
-// import { RouterOutlet } from '@angular/router';
+import { RouterOutlet } from '@angular/router';
 import { TopnavComponent } from "./topnav/topnav.component";
-import { RecipesSectionComponent } from "./recipes-section/recipes-section.component";
 import { FooterComponent } from './footer/footer.component';
 import { CategoriesComponent } from "./categories/categories.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [TopnavComponent, RecipesSectionComponent, FooterComponent, CategoriesComponent],
+  imports: [TopnavComponent, RouterOutlet, FooterComponent, CategoriesComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
