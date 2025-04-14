@@ -1,6 +1,11 @@
-<app-topnav (categoryOpen)="switchingToggle($event)"></app-topnav>
+<div class="topnav">
+  <app-topnav (categoryOpen)="switchingToggle($event)"></app-topnav>
+</div>
+
 @if(toggleCategory){
 <app-categories (toggleCategory)="toggleCategoryPanel($event)"></app-categories>
 }
-<app-recipes-section></app-recipes-section>
-<app-footer></app-footer>
+<div class="right-pane-container" [class.left-nav-opened]="toggleCategory">
+  <router-outlet></router-outlet>
+  <app-footer></app-footer>
+</div>
