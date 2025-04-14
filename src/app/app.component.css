@@ -1,0 +1,12 @@
+.topnav {
+  min-height: 59px;
+}
+
+.right-pane-container {
+  width: 100%;
+}
+
+.right-pane-container.left-nav-opened {
+  width: 80.5%;
+  margin-left: auto;
+}
