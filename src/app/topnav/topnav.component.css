@@ -5,12 +5,54 @@
   padding: 10px 20px;
   background-color: #f10d0c;
   color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.sidenav {
+  width: 295px;
+  background-color: #f0f0f0;
+  height: 100vh;
+  position: fixed;
+  top: 65px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.sidenav.open {
+  width: 295px;
+}
+
+.sidenav:not(.open) {
+  width: 60px;
+}
+
+.toggle-button {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: 5px;
+  right: 0;
+  background: none;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
 }
 
 .logo {
   display: flex;
   align-items: center;
 }
+
+.logo img {
+  height: 30px;
+  margin-right: 10px;
+}
+
+/* This style is new */
 
 .logo span {
   font-size: 1.5em;
@@ -41,6 +83,8 @@
   height: 2px;
   background-color: #fff; /* Example bar color */
 }
+
+/* till this line */
 
 .search-container {
   position: relative;
@@ -87,4 +131,13 @@ button.search {
 
 .profile i {
   font-size: 20px;
+}
+
+button.categories {
+  background-color: #ab0805;
+  border: 2px solid #ab0805;
+  border-radius: 10px;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
 }
