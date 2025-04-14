@@ -1,0 +1,291 @@
+.top-banner {
+  width: 100%;
+}
+h1 {
+  letter-spacing: -2px;
+}
+
+.plus {
+  position: absolute;
+  top: 30px;
+  width: 30px;
+  height: 10px;
+  background: #d54215;
+}
+
+.horizontal-plus {
+  position: absolute;
+  left: 30px;
+  width: 10px;
+  height: 30px;
+  background: #d54215;
+}
+
+.underline {
+  width: 150px;
+  height: 20px;
+  position: absolute;
+  z-index: -1;
+  top: 29px;
+  background: #e7ab46;
+}
+
+.flex {
+  display: flex;
+  position: relative;
+  left: 25px;
+  flex-direction: column;
+}
+
+.add-recipe-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #ffffff;
+  position: relative;
+  top: -60px;
+}
+
+.add-recipe-container p {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+section {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+section:last-child {
+  border-bottom: none;
+}
+
+#first-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  grid-template-rows: 1fr;
+}
+
+.image-upload-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.image-upload-label {
+  /* Make the label behave like a button */
+  display: block;
+  cursor: pointer;
+  /* No need for background color, the image will be visible */
+  border-radius: 5px; /* Give it some rounded corners */
+  margin-bottom: 10px; /* Add space between the image and the paragraph */
+  width: fit-content; /* Adjust width to image */
+}
+
+#upload-image {
+  /* Style the image */
+  width: 200px; /* Adjust as needed */
+  height: auto;
+  border-radius: 5px;
+}
+
+#actual-file {
+  /* Hide the actual file input */
+  visibility: hidden;
+  position: absolute;
+}
+
+.image-upload-container p {
+  font-size: 0.9em;
+  color: #555;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="file"],
+textarea {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+textarea {
+  min-height: 80px;
+}
+
+.form-array-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.form-array-item input[type="text"],
+.form-array-item textarea {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.form-array-item button {
+  padding: 8px 12px;
+  cursor: pointer;
+  border: 1px solid #d9534f;
+  background-color: #f0ad4e;
+  color: white;
+  border-radius: 4px;
+}
+
+.form-array-item button:hover {
+  background-color: #d43f3a;
+  border-color: #d43f3a;
+}
+
+button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button[type="submit"]:hover {
+  background-color: #4cae4c;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.8em;
+  margin-top: 5px;
+}
+
+.image-preview {
+  border: 1px dashed #ccc;
+  padding: 20px;
+  text-align: center;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+/* Ingredients Section Specific Styles */
+#ingredients label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.9em;
+  color: #555;
+}
+
+#ingredients label button {
+  background: none;
+  color: #007bff; /* Link color */
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: inherit;
+}
+
+#ingredients label button:hover {
+  color: #0056b3;
+}
+
+.form-array-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  margin-top: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.form-array-item input[type="text"] {
+  flex-grow: 1;
+  border: none;
+  padding: 8px;
+  font-size: 1em;
+}
+
+.form-array-item input[type="text"]:focus {
+  outline: none;
+}
+
+.remove-item {
+  background: none;
+  color: #dc3545; /* Red color for the X */
+  border: none;
+  padding: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 1.2em;
+  line-height: 1;
+}
+
+.remove-item:hover {
+  opacity: 0.8;
+}
+
+.remove-item .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.add-controls {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.add-controls .add-button {
+  /* Inherits base styles, adjust if needed */
+  margin-right: 10px;
+}
+
+.btn1 {
+  background: none;
+  cursor: pointer;
+  border: none;
+  border-bottom: 1px solid red;
+}
+
+.btn1:hover {
+  border-bottom: 2.5px solid red;
+  font-weight: 500;
+}
+
+.btn-main {
+  padding: 10px 20px;
+  background: white;
+  font-weight: 500;
+  border: 1px solid red;
+}
+
+.btn-main:hover {
+  background: red;
+  color: white;
+}

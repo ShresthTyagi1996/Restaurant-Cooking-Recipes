@@ -1,0 +1,221 @@
+<img src="canvas.jpg" alt="top banner food" class="top-banner" />
+<div class="add-recipe-container">
+  <div class="styling">
+    <div class="add-symbol">
+      <div class="plus"></div>
+      <div class="horizontal-plus"></div>
+    </div>
+    <div class="flex">
+      <h1>Add a Recipe</h1>
+      <div class="underline"></div>
+    </div>
+  </div>
+  <br />
+  <p>
+    Uploading personal recipes is easy! Add yours to your favorites, share with
+    friends, family, or the HomeCooks community.
+  </p>
+
+  <form [formGroup]="recipeForm" (ngSubmit)="onSubmit()">
+    <section id="first-section">
+      <div class="grid-1">
+        <h2>Recipe Title</h2>
+        <input
+          type="text"
+          formControlName="title"
+          placeholder="Give your recipe a title"
+          required
+        />
+        <div
+          *ngIf="
+            recipeForm.controls['title'].invalid &&
+            recipeForm.controls['title'].touched
+          "
+          class="error-message"
+        >
+          Title is required.
+        </div>
+        <h2>Description</h2>
+        <textarea
+          formControlName="description"
+          placeholder="Share the story behind your recipe and what makes it special."
+          rows="13"
+        ></textarea>
+      </div>
+
+      <div class="grid-2">
+        <div class="image-upload-container">
+          <label for="actual-file" class="image-upload-label">
+            <img
+              src="your_pic_here.jpg"
+              alt="Upload Your Photo"
+              id="upload-image"
+            />
+          </label>
+          <input type="file" id="actual-file" accept="image/*" />
+          <p>
+            Use JPEG or PNG. Must be at least 960 x 960. Max file size: 30MB
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Ingredients</h2>
+      <p class="ingredients-description">
+        Enter one ingredient per line. Include the quantity (i.e. cups,
+        tablespoons) and any special preparation (i.e. sifted, softened,
+        chopped). Use optional headers to organize the different parts of the
+        recipe (i.e. Cake, Frosting, Dressing).
+      </p>
+      <label class="label-styles" for="ingredients"
+        >Enter ingredients below or
+        <button type="button" (click)="addSeveralIngredients()" class="btn1">
+          Add several at once
+        </button></label
+      >
+
+      <div formArrayName="ingredients">
+        <div
+          *ngFor="let ingredient of ingredientControls; let i = index"
+          class="form-array-item"
+        >
+          <input
+            type="text"
+            [formControlName]="i"
+            placeholder="e.g. 2 cups flour, sifted"
+            required
+          />
+          <button
+            type="button"
+            class="remove-item btn1"
+            (click)="removeIngredient(i)"
+          >
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Remove Ingredient</span>
+          </button>
+          <div
+            *ngIf="ingredient.invalid && ingredient.touched"
+            class="error-message"
+          >
+            Ingredient is required.
+          </div>
+        </div>
+      </div>
+
+      <div class="add-controls">
+        <button
+          type="button"
+          class="add-button add-ingredient btn-main"
+          (click)="addIngredient()"
+        >
+          + Add Ingredient
+        </button>
+        <button type="button" class="add-button add-header btn1">
+          + Add Header
+        </button>
+      </div>
+    </section>
+
+    <section>
+      <h2>Directions</h2>
+      <p>
+        Explain how to make your recipe, including oven temperatures, baking or
+        cooking times, and pan sizes, etc. Use optional headers to organize the
+        different parts of the recipe (i.e. Prep, Bake, Decorate).
+      </p>
+      <label for="directions"
+        >Enter directions below or
+        <button type="button" (click)="addSeveralIngredients()" class="btn1">
+          Add several at once
+        </button></label
+      >
+      <div formArrayName="directions">
+        <div
+          *ngFor="let direction of directionControls; let i = index"
+          class="form-array-item"
+        >
+          <textarea
+            formControlName="i"
+            placeholder="Step-by-step direction"
+            required
+          ></textarea>
+          <button type="button" (click)="removeDirection(i)" class="btn1">
+            Remove
+          </button>
+          <div
+            *ngIf="direction.invalid && direction.touched"
+            class="error-message"
+          >
+            Direction is required.
+          </div>
+        </div>
+        <button type="button" (click)="addDirection()" class="btn-main">
+          + Add Direction
+        </button>
+      </div>
+    </section>
+
+    <section>
+      <h2>Nutrition Facts (optional)</h2>
+      <div formArrayName="nutrition_facts">
+        <div
+          *ngFor="let fact of nutritionFactControls; let i = index"
+          class="form-array-item"
+        >
+          <input
+            type="text"
+            formControlName="i"
+            placeholder="e.g., Calories: 200, Fat: 10g"
+          />
+          <button type="button" (click)="removeNutritionFact(i)">Remove</button>
+        </div>
+        <button type="button" (click)="addNutritionFact()" class="btn-main">
+          + Add Nutrition Fact
+        </button>
+      </div>
+    </section>
+
+    <section>
+      <h2>Servings</h2>
+      <input type="number" formControlName="servings" min="1" />
+      <div
+        *ngIf="
+          recipeForm.controls['servings'].invalid &&
+          recipeForm.controls['servings'].touched
+        "
+        class="error-message"
+      >
+        Servings must be at least 1.
+      </div>
+    </section>
+
+    <section>
+      <h2>Prep Time</h2>
+      <input
+        type="text"
+        formControlName="prep_time"
+        placeholder="e.g., 15 mins"
+      />
+    </section>
+
+    <section>
+      <h2>Cook Time</h2>
+      <input
+        type="text"
+        formControlName="cook_time"
+        placeholder="e.g., 30 mins"
+      />
+    </section>
+
+    <section>
+      <h2>Notes (optional)</h2>
+      <textarea
+        formControlName="notes"
+        placeholder="Additional notes about the recipe."
+      ></textarea>
+    </section>
+
+    <button type="submit" (click)="onSubmitRecipe()">Submit Recipe</button>
+  </form>
+</div>
